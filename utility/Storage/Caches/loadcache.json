@@ -50,5 +50,9 @@
     ".\/pages\/App\/Views\/home.html": {
         "hash": "cbcfc203fdcaf3c7680f902e075f6318",
         "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
+    },
+    ".\/pages\/App\/Views\/about.html": {
+        "hash": "d82abee9e28cc1aca715e1aea06a8903",
+        "path": "utility\/Storage\/Caches\/Views\/cache.4473d2dab24bebd27bf2406d78bcd028.App.about.html"
     }
 }
