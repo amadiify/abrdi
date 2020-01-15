@@ -71,7 +71,8 @@ class Config
             $data = (object) [
                 'stylesheet' => $stylesheet,
                 'scripts' => $scripts,
-                'stylesheet@bundle' => ['theme/bundle.css']
+                'stylesheet@bundle' => ['theme/bundle.css'],
+                'scripts@bundle' => ['theme/bundle.js'],
             ];
 
             // load static

@@ -2427,5 +2427,7 @@
     ".\/vendor\/tholu\/php-packer\/tests\/test.js": 1556212226,
     ".\/vendor\/tholu\/php-packer\/tests\/test.php": 1556212226,
     ".\/utility\/Storage\/Logs\/Deploy\/deploylogfa739f4a91635b5fa285f008c9561afc.json": 1579110735,
-    ".\/lab\/Cms\/Database\/query.sql": 1579101163
+    ".\/lab\/Cms\/Database\/query.sql": 1579101163,
+    ".\/public\/Assets\/Css\/theme\/bundle.css": 1579112428,
+    ".\/public\/Assets\/Js\/theme\/bundle.js": 1579112908
 }
