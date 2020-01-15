@@ -46,5 +46,9 @@
     ".\/lab\/Cms\/MVC\/App\/Views\/login.html": {
         "hash": "7ee6e14ed5a0a2c8ed0053ef199987ae",
         "path": "utility\/Storage\/Caches\/Views\/cache.edb4d7398a6da9d9939912fdcb22565c.App.login.html"
+    },
+    ".\/pages\/App\/Views\/home.html": {
+        "hash": "cbcfc203fdcaf3c7680f902e075f6318",
+        "path": "utility\/Storage\/Caches\/Views\/cache.6ca59b1b5498ee214c0f2258b73815c5.App.home.html"
     }
 }
