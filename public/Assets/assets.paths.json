@@ -50,5 +50,6 @@
     "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/zema.bundle.css": "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/zema.bundle.css",
     "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/zema.bundle.js": "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/zema.bundle.js",
     "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/assets\/zema.bundle.css": "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/assets\/zema.bundle.css",
-    "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/assets\/zema.bundle.js": "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/assets\/zema.bundle.js"
+    "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/assets\/zema.bundle.js": "https:\/\/cdn.jsdelivr.net\/gh\/amadiify\/cdn\/assets\/zema.bundle.js",
+    "theme\/bundle.css": "public\/Assets\/Css\/theme\/bundle.css"
 }
