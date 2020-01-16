@@ -698,7 +698,7 @@ NioApp = function (NioApp, $, window, document) {
         if($('#'+_tweets_feed).exists()){
             var twitterConfig = {
                 "profile": {
-                  "screenName": 'envato'
+                  "screenName": 'abrdi'
                 },
                 "domId": _tweets_feed,
                 "maxTweets": 3,
