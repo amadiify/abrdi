@@ -417,7 +417,36 @@ function __findSubDirectory($dir, $sub, $file)
 
 	return $path;
 }
-	
+
+function findDirectory(string $parentDir, string $directory)
+{
+	$dirs = glob($parentDir . '/*');
+
+	$filepath = null;
+
+	foreach ($dirs as $dir)
+	{
+		if ($dir != '.' && $dir != '..' && is_dir($dir))
+		{
+			$base = basename($dir);
+
+			if ($base == $directory)
+			{
+				return $dir;
+			}
+
+			// call func again
+			$filepath = findDirectory($dir, $directory);
+
+			if ($filepath !== null)
+			{
+				return $filepath;
+			}
+		}
+	}
+
+	return $filepath;
+}
 
 function isVal($data, $res)
 {
@@ -4866,4 +4895,37 @@ function dropbox(string $name = '', $content = null)
 
 	// set to internal
 	$dropboxInternal[$name] = $content;
+}
+
+// get autoloader class from cache
+function getAutoloaderPathFromCache(string $namespace, &$filepath = null)
+{
+	$namespace = str_replace('\\', '/', $namespace);
+
+	// get autoloader cache
+	$autoloaderCache = read_json(PATH_TO_STORAGE . 'Caches/autoloadercache.json', true);
+
+	if (isset($autoloaderCache[$namespace]))
+	{
+		$filepath = $autoloaderCache[$namespace];
+
+		return true;
+	}
+
+	return false;
+}
+
+// save autoloader class to cache
+function saveNamespaceInAutoloader(string $namespace, string $filepath)
+{
+	$namespace = str_replace('\\', '/', $namespace);
+
+	// get autoloader cache
+	$autoloaderCache = read_json(PATH_TO_STORAGE . 'Caches/autoloadercache.json', true);
+
+	// set cache
+	$autoloaderCache[$namespace] = $filepath;
+
+	// save now
+	save_json(PATH_TO_STORAGE . 'Caches/autoloadercache.json', $autoloaderCache);
 }

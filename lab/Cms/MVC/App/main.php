@@ -368,5 +368,18 @@ class App extends Controller
         
 		$this->render($view, ['controllerViews' => $controllerViews]);
 	}
+	/**
+    * App/install wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function install()
+	{
+		$this->render('install');
+	}
 }
 // END class

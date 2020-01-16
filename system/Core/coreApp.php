@@ -1481,13 +1481,13 @@ class Bootloader extends DatabaseHandler
 
 					$next = isset($params[1]) ? $params[1] : null;
 
+					$directive = BootMgr::singleton(Directive::class);
+
 					if (!is_null($next))
 					{
 						// inject directives
 						if (is_callable($next))
-						{
-							$directive = BootMgr::singleton(Directive::class);
-							
+						{	
 							if (BootMgr::$BOOTMODE[Directive::class] == CAN_CONTINUE)
 							{
 								call_user_func($next, $directive);

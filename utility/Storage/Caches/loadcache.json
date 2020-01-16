@@ -98,5 +98,9 @@
     ".\/lab\/Cms\/MVC\/App\/Views\/images\/update.html": {
         "hash": "9726f3e40f2dddf7063962d04c415647",
         "path": "utility\/Storage\/Caches\/Views\/cache.c5fbefa919158061e2be247782157682.App.update.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/install.html": {
+        "hash": "00d921abe29760a1e2198b3399eb3a6c",
+        "path": "utility\/Storage\/Caches\/Views\/cache.f585aa0aff8fad59bf06d981b3130511.App.install.html"
     }
 }

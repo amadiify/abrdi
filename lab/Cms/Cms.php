@@ -51,6 +51,10 @@ class Cms
         'install' => [
             'icon' => 'fe-cpu',
             'link' => 'zema/install'
+        ],
+        'plugins' => [
+            'icon' => 'fe-cpu',
+            'link' => 'zema/plugins'
         ]
     ];
 
@@ -79,6 +83,9 @@ class Cms
             // load directive
             \Moorexa\Rexa::directive($row->directive, [$row->directive_class, $row->directive_method]);
         }); 
+
+        // load installations
+        self::loadInstallation();
     }
 
     // load image directive
@@ -433,5 +440,12 @@ class Cms
         }
         
         return null;
+    }
+
+    // load installation
+    public static function loadInstallation()
+    {
+        // example
+        $plugin = \Installations\Plugins\Events\Events::init();
     }
 }

@@ -1,0 +1,40 @@
+<?=\Moorexa\Rexa::runDirective(true,'component','header')?>
+<p>Install a theme, package or plugin.</p>
+<div class="card">
+	<div class="card-body">
+		<div class="table-responsive">
+			<form action="" method="POST" enctype="multipart/form-data">
+				<?=\Moorexa\Rexa::runDirective(true,'csrf')?>
+				<table class="table">
+					<tr>
+						<td>Select a zip file.</td>
+						<td>
+							<input name="install_file" class="form-control" type="file" data-accept=".zip" required>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Installation Type.</td>
+						<td>
+							<select name="install_type" class="form-control" required>
+								<option value="">Please select</option>
+								<option value="theme">Theme from marketplace</option>
+								<option value="plugin">Plugin from marketplace</option>
+								<option value="package">Package from marketplace</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button name="create" type="submit" class="btn btn-success">Install</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<?=\Moorexa\Rexa::runDirective(true,'component','footer')?>

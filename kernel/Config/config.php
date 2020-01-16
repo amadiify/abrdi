@@ -178,7 +178,8 @@ $kernel->bootstrap ([
 	 * @config.static_url (default = '') 
 	 * info: Cookie free static url for serving static files. eg static.example.com
 	*/
-	'static_url' => 'https://cdn.jsdelivr.net/gh/amadiify/abrdi/',
+	'static_url' => '',
+	// 'static_url' => 'https://cdn.jsdelivr.net/gh/amadiify/abrdi/',
 
 
 	/*

@@ -54,5 +54,15 @@
     ".\/lab\/Cms\/MVC\/App\/Models\/:Container.php:Container.php": ".\/lab\/Cms\/MVC\/App\/Models\/Container.php",
     "kernel\/Partials\/:meta-tags.md:Meta-tags.md": "kernel\/Partials\/meta-tags.md",
     "public\/Assets\/Js\/\/:moorexa.js": "public\/Assets\/Js\/Rexajs\/moorexa.js",
-    "public\/Assets\/Js\/\/:deffer.min.js": "public\/Assets\/Js\/Rexajs\/deffer.min.js"
+    "public\/Assets\/Js\/\/:deffer.min.js": "public\/Assets\/Js\/Rexajs\/deffer.min.js",
+    ".\/lab\/:Events.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Events.php",
+    ".\/lab\/\/SmartRow:Directives.php": ".\/lab\/SmartRow\/Directives.php",
+    ".\/lab\/\/Cms\/Database:Query.php": ".\/lab\/Cms\/Database\/Query.php",
+    ".\/lab\/\/Cms\/Installations:Events.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Events.php",
+    ".\/lab\/\/Cms\/Installations:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Directives.php",
+    ".\/lab\/\/Cms:Container.php": ".\/lab\/Cms\/Container.php",
+    ".\/utility\/\/Classes\/Hyphe:Engine.php": ".\/utility\/Classes\/Hyphe\/Engine.php",
+    ".\/utility\/Classes\/\/Hyphe:Engine.php": ".\/utility\/Classes\/Hyphe\/Engine.php",
+    ".\/utility\/\/Classes\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php",
+    ".\/utility\/Classes\/\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php"
 }
