@@ -328,6 +328,8 @@ class App extends Controller
         // get action view
         $view = $this->provider->getActionView('pages', $action);
 
+        $pageid = intval($pageid);
+
          // get navigation info
          if (is_int($pageid))
          {
@@ -342,6 +344,8 @@ class App extends Controller
 
              dropbox('page', $nav);
          }
+
+        $view = ($action == 'edit-view') ? 'pages/'.$action : $view;
 
         // get base directory
         $basepath = env('bootstrap')['controller.basepath'];

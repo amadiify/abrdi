@@ -1214,5 +1214,20 @@
     ".\/utility\/Classes\/:Handler.php": [
         ".\/utility\/Classes\/",
         "Handler.php"
+    ],
+    ".\/pages\/App\/Static\/:events.css:events.cxx.css:Events.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "events.css",
+            "events.cxx.css",
+            "Events.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:events.js:Events.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "events.js",
+            "Events.js"
+        ]
     ]
 }

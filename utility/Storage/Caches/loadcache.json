@@ -54,5 +54,49 @@
     ".\/pages\/App\/Views\/about.html": {
         "hash": "d82abee9e28cc1aca715e1aea06a8903",
         "path": "utility\/Storage\/Caches\/Views\/cache.4473d2dab24bebd27bf2406d78bcd028.App.about.html"
+    },
+    ".\/pages\/App\/Views\/focus.html": {
+        "hash": "58e0d82efbbc8ffeabfb8cc355324165",
+        "path": "utility\/Storage\/Caches\/Views\/cache.6250d26f2fd68a081c719946d60557bf.App.focus.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/pages\/edit-nav.html": {
+        "hash": "90e46c14f4fb80de298596a618c69865",
+        "path": "utility\/Storage\/Caches\/Views\/cache.4cec92192bac39b4e13e7f2af01a969a.App.edit-nav.html"
+    },
+    "public\/Helper\/noheader.php": {
+        "hash": "38e075b8a63d3bb6e140366c66ee712f",
+        "path": "utility\/Storage\/Caches\/Headers\/cache.4f70a72745cebbd1e80114086850d032.App.noheader.php"
+    },
+    "public\/Helper\/nofooter.php": {
+        "hash": "b7bb4bedf76dcf7492836f797feb4255",
+        "path": "utility\/Storage\/Caches\/Footers\/cache.e9fcdbf77a5a787d3299f2de1d1695b1.App.nofooter.php"
+    },
+    ".\/pages\/App\/Views\/events.html": {
+        "hash": "343bf61c04b7c1a907a212bab7ca0432",
+        "path": "utility\/Storage\/Caches\/Views\/cache.2ce7fff31b770ac40670b33442036e9a.App.events.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/edit-view.html": {
+        "hash": "667dbe3a39d77201603f555f80c61312",
+        "path": "utility\/Storage\/Caches\/Views\/cache.3e0106bb46297b7ecd0f9478a0a61a79.App.edit-view.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/pages\/edit-view.html": {
+        "hash": "382ef83fbd25e62736989a664d78d090",
+        "path": "utility\/Storage\/Caches\/Views\/cache.8ca860c7daf9c347e2fa17751d20a739.App.edit-view.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/container\/create.html": {
+        "hash": "b91dbb58ceaf719e3002d4b643fa1904",
+        "path": "utility\/Storage\/Caches\/Views\/cache.ecc15ec5723dfd18eac7d72a6f5934cd.App.create.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/container\/edit.html": {
+        "hash": "d78b9874ac7d889dae6691c538b1a573",
+        "path": "utility\/Storage\/Caches\/Views\/cache.96796625d9a06f1dd6eddcde6bfaa327.App.edit.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/images\/upload.html": {
+        "hash": "aeba2a43d388d999557bc09e3c164fa3",
+        "path": "utility\/Storage\/Caches\/Views\/cache.e3d1356714182eef67d54cfa0458d013.App.upload.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/images\/update.html": {
+        "hash": "9726f3e40f2dddf7063962d04c415647",
+        "path": "utility\/Storage\/Caches\/Views\/cache.c5fbefa919158061e2be247782157682.App.update.html"
     }
 }

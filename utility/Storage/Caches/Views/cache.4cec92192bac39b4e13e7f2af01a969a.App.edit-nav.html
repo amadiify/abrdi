@@ -52,7 +52,7 @@
 							<select name="parentid" class="form-control">
 								<option value="0">None</option>
 								<?php
-$navigation = \Moorexa\DB::sql('SELECT * FROM navigation ');if ($navigation->rows > 0){
+$navigation = \Moorexa\DB::sql('SELECT * FROM '.(\Moorexa\DB::getTableName('navigation')).' ');if ($navigation->rows > 0){
 while ($nav = $navigation->obj())
 { ?>
 									<?php if($nav->navigationid == $page->parentid) { ?>

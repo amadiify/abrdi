@@ -64,5 +64,18 @@ class App extends Controller
 	{
 		$this->render('focus');
 	}
+	/**
+    * App/events wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function events()
+	{
+		$this->render('events');
+	}
 }
 // END class

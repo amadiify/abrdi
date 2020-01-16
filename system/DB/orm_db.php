@@ -112,12 +112,12 @@ class ORMReciever
 
 					if (property_exists($className, 'table'))
 					{
-						$this->instance->table = DB::getTableName($className->table);
+						$this->instance->table = \Moorexa\DB::getTableName($className->table);
 					}
 
 					if ($tableName != null)
 					{
-						$this->instance->table = DB::getTableName($tableName);
+						$this->instance->table = \Moorexa\DB::getTableName($tableName);
 					}
 
 					$this->instance->classUsingLazy = $className;
@@ -138,12 +138,12 @@ class ORMReciever
 				
 				if (property_exists($instance, 'table'))
 				{
-					$this->instance->table = DB::getTableName($instance->table);
+					$this->instance->table = \Moorexa\DB::getTableName($instance->table);
 				}
 
 				if ($tableName != null)
 				{
-					$this->instance->table = DB::getTableName($tableName);
+					$this->instance->table = \Moorexa\DB::getTableName($tableName);
 				}
 
 				$this->instance->classUsingLazy = $instance;
@@ -157,7 +157,7 @@ class ORMReciever
 				{
 					if ($tableName != null)
 					{
-						$this->instance->table = DB::getTableName($tableName);
+						$this->instance->table = \Moorexa\DB::getTableName($tableName);
 					}
 
 					call_user_func_array($callback, $args);
@@ -193,7 +193,7 @@ class ORMReciever
 					preg_match('/([_a-zA-Z0-9]+?)[:]{2}/', $line, $match);
 					if (isset($match[1]))
 					{
-						$dbinstance->table = DB::getTableName($match[1]);
+						$dbinstance->table = \Moorexa\DB::getTableName($match[1]);
 						$instance->instance = $dbinstance;
 					}
 					else
@@ -203,7 +203,7 @@ class ORMReciever
 							$line = isset($before[$x]) ? $before[$x] : null;
 							if (preg_match('/([_a-zA-Z0-9]+?)[:]{2}/', $line, $match) == true)
 							{
-								$dbinstance->table = DB::getTableName($match[1]);
+								$dbinstance->table = \Moorexa\DB::getTableName($match[1]);
 								$instance->instance = $dbinstance;
 								break;
 							}

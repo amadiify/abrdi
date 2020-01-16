@@ -29,6 +29,8 @@
         padding-top: 110px;
         padding-bottom: 110px;
     }
+    .error-page-section .error-thumbnail{display: none;}
+    .features-cat-list-area{display: none;}
 }
 .contact-icon { color:#afcb1f; }
 .contact-list li{border-bottom: 1px solid rgba(255,255,255,0.3);}
