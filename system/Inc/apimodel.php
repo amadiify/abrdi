@@ -2,6 +2,8 @@
 
 namespace Moorexa;
 
+use Moorexa\DB;
+
 /**
  * @package ApiModel
  * @author Amadi Ifeanyi <amadiify.com>
@@ -640,6 +642,8 @@ class ApiModel
                 $this->table = $table;
             }
 
+            $this->table = DB::getTableName($this->table);
+
             // create record
             $insert = DB::table($this->table)->insert($this);
 
@@ -668,6 +672,8 @@ class ApiModel
                 $this->getTable($table);
                 $this->table = $table;
             }
+
+            $this->table = DB::getTableName($this->table);
 
             if (is_null($promise))
             {
@@ -734,6 +740,8 @@ class ApiModel
                 $this->getTable($table);
                 $this->table = $table;
             }
+
+            $this->table = DB::getTableName($this->table);
 
             if (is_null($promise))
             {
@@ -818,6 +826,8 @@ class ApiModel
                 $this->getTable($table);
                 $this->table = $table;
             }
+
+            $this->table = DB::getTableName($this->table);
 
             if (is_null($promise))
             {
@@ -1442,6 +1452,8 @@ class ApiModel
     {
         // get table;
         $this->getTable($table);
+
+        $table = DB::getTableName($table);
 
         if ($this->isOk())
         {

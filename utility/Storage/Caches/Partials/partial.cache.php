@@ -16,5 +16,6 @@ return array (
   '9a426233d1d3a19ecc8345ac77175504_images.html' => 'f5445ee33f7b7a6b9714597cb636d6c9',
   '7a4c3e51f2049cc1cd4fd77aa9d86635_directive.html' => 'bc37adfc57472138355dde311869f80e',
   'f1a46a4120f907086d3adf1ae5e20f04_login-screen.html' => '2504caa8e23f4b611bc112651f6453d6',
+  'ab93f07626ba4f8da3da31bc8daee27c_events.html' => '980a1cbad2c4751e32d2da66094b4331',
 );
 ?>

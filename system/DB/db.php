@@ -3736,6 +3736,10 @@ class DB
             {
                 $this->argumentPassed[$index][$key] = $value;
             }
+            elseif (is_object($arr))
+            {
+                $this->argumentPassed[$index]->{$key} = $value;
+            }
         }
         return $this;
     }

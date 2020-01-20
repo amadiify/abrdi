@@ -22,7 +22,13 @@ class App extends Model
     public $triggers = [
         'users' => ['create' => 'post:addAUser', 'edit' => 'post:updateUser', 'delete' => 'get:deleteUser'],
         'pages' => ['edit-view' => 'post:updateView', 'edit-nav' => 'post:updateNavigation', 
-                    'create' => 'post:createNavigation', 'delete' => 'get:deleteNav']
+                    'create' => 'post:createNavigation', 'delete' => 'get:deleteNav'],
+        'plugins' => ['create' => 'callPluginMethods', 'edit' => 'callPluginMethods', 'delete' => 'callPluginMethods']
+    ];
+
+    // argument indexing
+    public $argumentIndexing = [
+        'callPluginMethods' => 2, // start from index 2
     ];
 
     // update configuration
@@ -235,6 +241,56 @@ class App extends Model
         if ($this->delete('navigationid = ?', $navigationid)->ok)
         {
             Alert::success('Navigation deleted successfully');
+        }
+    }
+
+    // create plugin trigger
+    public function callPluginMethods($plugin, $action, $id)
+    {
+        $model = createModelRule(function($body){ $body->allow_form_input(); });
+
+        self::loadPluginConfiguration($action, $plugin, $model, $id);
+
+        // push model to view
+        dropbox('model', $model);
+    }
+
+    // load configuration
+    private static function loadPluginConfiguration($action, $plugin, &$model=null)
+    {
+        // load configuration
+        $plugin = call_user_func('\Installations\Plugins\\'.ucfirst($plugin).'\\'.ucfirst($plugin).'::config');
+
+        // get methods
+        $getMethod = isset($plugin[$action]) ? $plugin[$action] : false;
+
+        // get arguments
+        $args = func_get_args();
+        
+        // start from index 4
+        $args = array_splice($args, 3);
+
+        if ($model !== null)
+        {
+            // push model to the begining
+            array_unshift($args, $model);
+        }
+
+        if (is_array($getMethod))
+        {
+            // get request method
+            $http_method = $_SERVER['REQUEST_METHOD'];
+
+            if (isset($getMethod[$http_method]))
+            {
+                $config = $getMethod[$http_method];
+
+                // get arguments
+                Bootloader::$instance->getParameters($config['class'], $config['method'], $const, $args);
+
+                // call method
+                call_user_func_array(['\\'.$config['class'], $config['method']], $const);
+            }
         }
     }
 }

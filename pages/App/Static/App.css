@@ -35,3 +35,14 @@
 .contact-icon { color:#afcb1f; }
 .contact-list li{border-bottom: 1px solid rgba(255,255,255,0.3);}
 .contact-list li a:hover { color: #afcb1f; }
+.post-content .btn{background: none;}
+.btn-arrow {color:#afcb1f;}
+.event_image{width: 80px; height: 80px; background-size: contain; background-repeat: no-repeat;
+background-position: center;}
+.post-content h4 a:hover { color: #afcb1f; }
+.post-content .btn:hover, .post-content .btn:focus { color: #000; }
+.post-full .post-date { background:#afcb1f; }
+.post-full .post-content h3 a:hover { color:#afcb1f; }
+.event-big-thumb{width: 100%; height: 250px; background-repeat: no-repeat;
+background-position: center; background-size: contain;
+border: 1px solid #eee;}

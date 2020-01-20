@@ -381,5 +381,64 @@ class App extends Controller
 	{
 		$this->render('install');
 	}
+	/**
+    * App/plugins wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function plugins($plugin, $action)
+	{
+        $view = $this->provider->getActionView('plugins', $action);
+
+        if (!is_null($plugin))
+        {
+            // check if plugin exist
+            $directory = CMS_ROOT . 'Installations/Plugins/' . ($plugin);
+
+            if (is_dir($directory))
+            {
+                // load configuration
+                $plugin = call_user_func('\Installations\Plugins\\'.ucfirst($plugin).'\\'.ucfirst($plugin).'::config');
+
+                // is array ? then load configuration
+                if (is_array($plugin))
+                {
+                    // check if base path for view exists in config array
+                    if (isset($plugin['view']))
+                    {
+                        // get view base path
+                        $baseViewPath = $plugin['view'];
+                        
+                        // default view
+                        $pluginView = $baseViewPath . 'home.html';
+
+                        if ($action != 'plugins')
+                        {
+                            // check if view exists
+                            if (file_exists($baseViewPath . $action . '.html'))
+                            {
+                                $pluginView = $baseViewPath . $action . '.html';
+                            }
+                        }
+
+                        if (file_exists($pluginView))
+                        {
+                            dropbox('pageTitle', 'Plugins/'.ucfirst(basename($directory)));
+
+                            // set main view
+                            $view = $pluginView;
+                        }
+
+                    }
+                }
+            }
+        }
+
+		$this->render($view);
+	}
 }
 // END class

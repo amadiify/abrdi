@@ -418,7 +418,7 @@ function __findSubDirectory($dir, $sub, $file)
 	return $path;
 }
 
-function findDirectory(string $parentDir, string $directory)
+function findBaseDirectory(string $parentDir, string $directory)
 {
 	$dirs = glob($parentDir . '/*');
 
@@ -436,13 +436,36 @@ function findDirectory(string $parentDir, string $directory)
 			}
 
 			// call func again
-			$filepath = findDirectory($dir, $directory);
+			$filepath = findBaseDirectory($dir, $directory);
 
 			if ($filepath !== null)
 			{
 				return $filepath;
 			}
 		}
+	}
+
+	return $filepath;
+}
+
+function findDirectory(string $parentDir, array $directory)
+{
+	$filepath = null;
+	$baseDir = findBaseDirectory($parentDir, $directory[0]);
+
+	if ($baseDir != null)
+	{
+		// remove index 
+		$baseIndex = $directory[0];
+		$quote = preg_quote('/'.$baseIndex, '/');
+		$baseDir = preg_replace("/($quote)$/", '', $baseDir);
+		$parentDir = $baseDir . '/' . implode('/', $directory);
+
+		if (is_dir($parentDir))
+		{
+			$filepath = $parentDir;
+		}
+		
 	}
 
 	return $filepath;
@@ -551,6 +574,14 @@ function url($path = "", $encode = false)
 				}
 			break;
 		}
+	}
+
+	// parse url
+	$parse = parse_url($encode);
+
+	if (isset($parse['scheme']))
+	{
+		return $encode;
 	}
 
 	return rtrim($url, "/")."/".$encode;
@@ -3691,7 +3722,7 @@ function chs(string $template, $props = null)
 {
 	if (preg_match('/[<][a-zA-Z_]([\s\S]*?>)/', $template, $match))
 	{
-		$chs = new \Moorexa\CHS();
+		$chs = new \Moorexa\TemplateEngine();
 		return $chs->render($match[0], $template, $props);		
 	}
 }
@@ -3945,7 +3976,7 @@ function interpolate($content)
 
 	if ($chs == null)
 	{
-		$chs = new \Moorexa\CHS();
+		$chs = new \Moorexa\TemplateEngine();
 	}
 
 	$chs->convertShortcuts($content);
@@ -4469,7 +4500,7 @@ function cacheOrLoadCache($path, &$newpath, $folder)
 
 	if (is_null($chs))
 	{
-		$chs = new \Moorexa\CHS();
+		$chs = new \Moorexa\TemplateEngine();
 	}
 
 	// open loadcache.json
@@ -4515,8 +4546,6 @@ function cacheOrLoadCache($path, &$newpath, $folder)
 			$json[$path] = ['hash' => md5($content), 'path' => $destination];
 
 			$chs->interpolateString = false;
-			$class = \Moorexa\Bootloader::$currentClass;
-			$class = isset($class->model) ? $class->model : $class;
 
 			if ($folder == 'Footers')
 			{
@@ -4524,7 +4553,7 @@ function cacheOrLoadCache($path, &$newpath, $folder)
 			}
 
 			// interpolate
-			$chs->interpolateExternal($data, $class, $interpolated);
+			$chs->interpolateExternal($data, $interpolated);
 
 			\Hyphe\Compile::ParseDoc($interpolated);
 

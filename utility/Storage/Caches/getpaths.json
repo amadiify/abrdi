@@ -64,5 +64,14 @@
     ".\/utility\/\/Classes\/Hyphe:Engine.php": ".\/utility\/Classes\/Hyphe\/Engine.php",
     ".\/utility\/Classes\/\/Hyphe:Engine.php": ".\/utility\/Classes\/Hyphe\/Engine.php",
     ".\/utility\/\/Classes\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php",
-    ".\/utility\/Classes\/\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php"
+    ".\/utility\/Classes\/\/Hyphe:Compile.php": ".\/utility\/Classes\/Hyphe\/Compile.php",
+    ".\/utility\/\/Classes\/Bootstrap:Alert.php": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    ".\/utility\/Classes\/\/Bootstrap:Alert.php": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    ".\/lab\/\/Cms\/Installations:Query.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Query.php",
+    ".\/lab\/\/Cms\/Installations:Gallery.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Gallery.php",
+    ".\/lab\/:Gallery.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Gallery.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Events.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Events.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Directives.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Gallery.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Gallery.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Directives.php"
 }

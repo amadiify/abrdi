@@ -84,6 +84,12 @@ class Cms
             \Moorexa\Rexa::directive($row->directive, [$row->directive_class, $row->directive_method]);
         }); 
 
+        // set base path
+        if (!defined('CMS_ROOT'))
+        {
+            define('CMS_ROOT', boot()->get('CMS')->getRoot() . '/');
+        }
+
         // load installations
         self::loadInstallation();
     }
@@ -265,29 +271,8 @@ class Cms
     // template
     public function loadTemplate()
     {
-        // get script filename
-        $filename = $_SERVER['SCRIPT_FILENAME'];
-
-        // get base name 
-        $basename = basename($filename);
-
-        // remove basename from $filename
-        $filename = rtrim($filename, $basename);
-
-        // covert backward slash to forward slash
-        $filename = str_replace('\\','/', $filename);
-
-        // get root
-        $root = __DIR__;
-
-        // covert backward slash to forward slash
-        $root = str_replace('\\','/', $root);
-
-        // remove filename from root
-        $root = str_ireplace($filename, '', $root);
-
         // check if template exists
-        $theme = HOME . $root . '/Theme/' . Cms::DEFAULT_THEME;
+        $theme = $this->getRoot() . '/Theme/' . Cms::DEFAULT_THEME;
 
         if (is_dir($theme))
         {
@@ -445,7 +430,56 @@ class Cms
     // load installation
     public static function loadInstallation()
     {
-        // example
-        $plugin = \Installations\Plugins\Events\Events::init();
+        $plugins = ['Events', 'Gallery'];
+
+        // load them
+        foreach ($plugins as $plugin)
+        {
+            // get class name
+            $className = ucfirst($plugin);
+
+            // define root directory
+            $rootDir =  CMS_ROOT . 'Installations/Plugins/' . $className . '/';
+
+            // constant name
+            $constant = strtoupper($className) . '_PLUGIN_BASE';
+
+            // not defined ?
+            if (!defined($constant))
+            {
+                define($constant, $rootDir);
+            }
+
+            // load init method
+            call_user_func('\Installations\Plugins\\'.$className.'\\'.$className.'::init');
+        }
+    }
+
+    // get root
+    private function getRoot()
+    {
+        // get script filename
+        $filename = $_SERVER['SCRIPT_FILENAME'];
+
+        // get base name 
+        $basename = basename($filename);
+
+        // remove basename from $filename
+        $filename = rtrim($filename, $basename);
+
+        // covert backward slash to forward slash
+        $filename = str_replace('\\','/', $filename);
+
+        // get root
+        $root = __DIR__;
+
+        // covert backward slash to forward slash
+        $root = str_replace('\\','/', $root);
+
+        // remove filename from root
+        $root = str_ireplace($filename, '', $root);
+
+        // return root
+        return HOME . $root;
     }
 }

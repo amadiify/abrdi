@@ -85,7 +85,8 @@ class Table
 
             $total = count($struct->sqljob);
             $rows = 0;
-            $migration = HOME . "lab/Sql/".ucfirst($struct->driver)."/".$struct->databaseSource.'.sql';
+			$migration = HOME . "lab/Sql/".ucfirst($struct->driver)."/".$struct->databaseSource.'.sql';
+			$now = 0;
 
             if (count($struct->sqljob) > 0)
             {

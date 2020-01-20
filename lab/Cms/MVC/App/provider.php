@@ -30,6 +30,10 @@ class AppProvider extends App
             'edit-view' => 'pages/edit-view',
             'edit-nav' => 'pages/edit-nav',
             'create' => 'pages/create'
+        ],
+        'plugins' => [
+            'create' => 'plugins/create',
+            'edit' => 'plugins/edit'
         ]
     ];
 

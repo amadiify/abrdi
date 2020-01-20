@@ -969,6 +969,7 @@ class Model extends Controller
 				if (property_exists($modelInstance, 'triggers'))
 				{
 					$triggers = $modelInstance->triggers;
+
 					if (is_array($triggers))
 					{
 						// check if there is a config for current view
@@ -1107,6 +1108,17 @@ class Model extends Controller
 										if (isset($triggerFuncArray[$method]))
 										{
 											$start = 3;
+										}
+
+										if (property_exists($modelInstance, 'argumentIndexing'))
+										{
+											$numbering = $modelInstance->argumentIndexing;
+											
+											// check if numbering configured for this method
+											if (isset($numbering[$method]))
+											{
+												$start = $numbering[$method];
+											}
 										}
 										
 										$other = array_splice($url, $start);

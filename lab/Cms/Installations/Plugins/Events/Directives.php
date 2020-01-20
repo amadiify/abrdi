@@ -7,11 +7,18 @@ class Directives
     // directive used
 	public static function directives(Directive $injector)
 	{
-		$injector->set('hello', 'helloDirective');
+        $injector->set('getEvents', 'fetchEventDirective');
+        $injector->set('eventTable', 'loadEventsFromPartials');
     }
     
-    public static function helloDirective()
+    public static function fetchEventDirective($maxFetch=5)
     {
-        return 'Hello chris';
+        return Query::getEvents($maxFetch);
+    }
+
+    public static function loadEventsFromPartials()
+    {
+        $file = EVENTS_PLUGIN_BASE . 'Partials/events.html';
+        return \Moorexa\View::loadPartial($file);
     }
 }

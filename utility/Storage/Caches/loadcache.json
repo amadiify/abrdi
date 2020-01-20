@@ -72,7 +72,7 @@
         "path": "utility\/Storage\/Caches\/Footers\/cache.e9fcdbf77a5a787d3299f2de1d1695b1.App.nofooter.php"
     },
     ".\/pages\/App\/Views\/events.html": {
-        "hash": "343bf61c04b7c1a907a212bab7ca0432",
+        "hash": "53072a1066072c0253d9684649774eb0",
         "path": "utility\/Storage\/Caches\/Views\/cache.2ce7fff31b770ac40670b33442036e9a.App.events.html"
     },
     ".\/lab\/Cms\/MVC\/App\/Views\/edit-view.html": {
@@ -102,5 +102,33 @@
     ".\/lab\/Cms\/MVC\/App\/Views\/install.html": {
         "hash": "00d921abe29760a1e2198b3399eb3a6c",
         "path": "utility\/Storage\/Caches\/Views\/cache.f585aa0aff8fad59bf06d981b3130511.App.install.html"
+    },
+    ".\/lab\/Cms\/MVC\/App\/Views\/plugins.html": {
+        "hash": "53ee2252035833e1e97233125a630472",
+        "path": "utility\/Storage\/Caches\/Views\/cache.1dbe6948e536e32d71a0ace77d1b5b02.App.plugins.html"
+    },
+    ".\/lab\/Cms\/Installations\/Plugins\/Events\/Views\/home.html": {
+        "hash": "ecf2db88fe52e10d7f8730cac99284f3",
+        "path": "utility\/Storage\/Caches\/Views\/cache.82c5df96dfff7317ba45b47f0ea97fd7.App.home.html"
+    },
+    ".\/lab\/Cms\/Installations\/Plugins\/Events\/Views\/create.html": {
+        "hash": "ec2907663eb7e0779099c58aa2f0e80f",
+        "path": "utility\/Storage\/Caches\/Views\/cache.796898ca6d891942f575d65e282d5a50.App.create.html"
+    },
+    ".\/lab\/Cms\/Installations\/Plugins\/Events\/Views\/edit.html": {
+        "hash": "ef5c874c957cc75bce462982cdd7209d",
+        "path": "utility\/Storage\/Caches\/Views\/cache.f6284335a7b560fe10df6b5609a52a0d.App.edit.html"
+    },
+    ".\/pages\/App\/Views\/gallery.html": {
+        "hash": "0ab52f83cc59ba204b7828ab1973491f",
+        "path": "utility\/Storage\/Caches\/Views\/cache.f9e123236d7c6ce2e16ed1f0b8141891.App.gallery.html"
+    },
+    ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Views\/home.html": {
+        "hash": "c1ae635b9fd12268dbb9a2699a4c78cc",
+        "path": "utility\/Storage\/Caches\/Views\/cache.9bcb2f9533233491dac14b7fe2982fca.App.home.html"
+    },
+    ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Views\/create.html": {
+        "hash": "3ffec4faa7671375913ca7097c541b57",
+        "path": "utility\/Storage\/Caches\/Views\/cache.9167b62dcdd32fcc0ee181f15a3f7a25.App.create.html"
     }
 }

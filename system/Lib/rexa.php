@@ -69,17 +69,22 @@ class Rexa
     }
 
     // load custom directive
-    public static function loadDirective(&$content, &$instance, &$chs = null)
+    public static function loadDirective($content, &$instance, &$chs = null)
     {
         if (is_null($chs))
         {
             $chs = isset(Bootloader::$currentClass->model) ? Bootloader::$currentClass->model : null;
         }
 
+        if (is_null($instance->interpolateExternal))
+        {
+            $instance->interpolateExternal = $content;
+        }
+
         $pendingElse = [];
 
         if (self::hasDirectives($content, $matches, $instance))
-        {   
+        {
             if (is_array($matches) && count($matches[0]) > 0)
             {
                 $shouldFail = [];
@@ -91,7 +96,15 @@ class Rexa
 
                     // get attribute line
                     $removed = false;
+                    $avoidShortPHPTags = false;
+
+                    if (preg_match('/^[@]{2}/', $cleanAttr))
+                    {
+                        $avoidShortPHPTags = true;
+                    }
+
                     $attrLine = trim(ltrim($cleanAttr, '@'.$attrName));
+
                     if (preg_match("/^[(]/", $attrLine))
                     {
                         $attrLine = preg_replace("/^[(]{1}/", '', $attrLine);
@@ -131,30 +144,35 @@ class Rexa
                         {
                             $comma = '';
 
-                            if (is_string($attrLine) && strlen($attrLine) > 1)
+                            if (is_string($attrLine) && strlen($attrLine) > 0)
                             {
                                 $comma = ',';
                             }
                             
                             $build = '<?=\Moorexa\Rexa::runDirective(true,\''.$attrName.'\''.$comma.$attrLine.')?>';
+
+                            if ($avoidShortPHPTags)
+                            {
+                                $build = '\Moorexa\Rexa::runDirective(true,\''.$attrName.'\''.$comma.$attrLine.');';
+                            }
                         }
 
                         $cleanAttr = trim($cleanAttr);
 
-                        if (!is_null($instance->interpolateContent))
+                        if (!is_null($instance->interpolateExternal))
                         {
-                            $instance->interpolateContent = str_replace($cleanAttr, $build, $instance->interpolateContent);
+                            $instance->interpolateExternal = str_replace($cleanAttr, $build, $instance->interpolateExternal);
                         }
                     }
                     else
                     {
                         $output = self::runDirective(false, $attrName, $attrLine, $chs, $response);
 
-                        if (!is_null($instance->interpolateContent))
+                        if (!is_null($instance->interpolateExternal))
                         {
                             if ($attrName != 'else')
                             {
-                                $instance->interpolateContent = str_replace(trim($cleanAttr), $response, $instance->interpolateContent);
+                                $instance->interpolateExternal = str_replace(trim($cleanAttr), $response, $instance->interpolateExternal);
                             }
                             else
                             {
@@ -170,9 +188,11 @@ class Rexa
         {
             foreach ($pendingElse as $i => $arr)
             {
-                $instance->interpolateContent = str_replace(trim($arr[0]), $arr[1], $instance->interpolateContent);
+                $instance->interpolateExternal = str_replace(trim($arr[0]), $arr[1], $instance->interpolateExternal);
             }
         }
+
+        return $instance->interpolateExternal;
     }
 
     // get directive response
@@ -323,7 +343,7 @@ class Rexa
 
             if (self::$Mooxes === null)
             {
-                self::$Mooxes = new CHS(false);
+                self::$Mooxes = new TemplateEngine(false);
             }
 
             $args = func_get_args();
@@ -584,7 +604,7 @@ class Rexa
             $dir = [[],[]];
 
             // find directives
-            $expression = '/([@|\\\]([a-zA-Z0-9_-])([^\n|;]*)+([;|\n]|))/';
+            $expression = '/([@|\\\]{1,2}([a-zA-Z0-9_-])([^\n|;]*)+([;|\n]|))/';
             preg_match_all($expression, $content, $directives);
 
             if (count($directives[0]) > 0)
@@ -651,6 +671,7 @@ class Rexa
                     }
                 }
 
+
                 $directive = null;
 
                 foreach ($cleanDirective as $i => $directive)
@@ -690,7 +711,7 @@ class Rexa
                         }
                     }
                     
-                }   
+                }  
             }
 
             $matches = $dir;

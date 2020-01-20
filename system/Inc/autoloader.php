@@ -13,11 +13,25 @@ include_once PATH_TO_CONFIG . 'aliases.php';
 
 spl_autoload_register(function($class) use ($alias, $tables){
 
+	// can continue checking
+	$canContinue = true;
+
 	if (getAutoloaderPathFromCache($class, $path))
 	{
-		include_once $path;
+		$canContinue = true;
+
+		//var_dump($class, $path);
+
+		if (file_exists($path))
+		{
+			$canContinue = false;
+
+			// include path from cache.
+			include_once $path;
+		}
 	}
-	else
+
+	if ($canContinue)
 	{
 		$namespacing =& $alias;
 
@@ -258,9 +272,10 @@ spl_autoload_register(function($class) use ($alias, $tables){
 
 								$namespace = str_replace('\\','/',$class);
 								$namespace = explode('/', $namespace);
-								
+								array_pop($namespace);
+
 								// get sub directory
-								$subdir = findDirectory(HOME . $dir . '/', $namespace[0]);
+								$subdir = findDirectory(HOME . $dir . '/', $namespace);
 
 								// base dir
 								$basedir = $subdir !== null ? $subdir : HOME . $dir . '/';

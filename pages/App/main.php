@@ -77,5 +77,22 @@ class App extends Controller
 	{
 		$this->render('events');
 	}
+	/**
+    * App/gallery wrapper. 
+    *
+    * See documention https://www.moorexa.com/doc/controller
+    *
+    * @param Any You can catch params sent through the $_GET request
+    * @return void
+    **/
+
+	public function gallery()
+	{
+        $this->requirecss('http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css');
+        $this->requirejs('http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js', 'before gallery.js');
+
+
+		$this->render('gallery');
+	}
 }
 // END class

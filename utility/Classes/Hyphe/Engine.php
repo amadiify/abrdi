@@ -492,7 +492,7 @@ class Engine
             $content = &$this->interpolateContent;
             
             // load directive
-            \Moorexa\Rexa::loadDirective($content, $this);
+            $content = \Moorexa\Rexa::loadDirective($content, $this);
         }
 
         

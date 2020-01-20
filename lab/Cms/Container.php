@@ -21,7 +21,7 @@ use Moorexa\File;
 class Container
 {
     public $containers = []; // pack all containers from the database
-    public $hypheEngine; // instance of Hyphe/Engine
+    public $templateEngine; // instance of Moorexa/TemplateEngine
 
     public function __construct()
     {
@@ -31,7 +31,7 @@ class Container
         });
 
         // create engine instance;
-        $this->hypheEngine = BootMgr::singleton_as('engine', \Hyphe\Engine::class);
+        $this->templateEngine = BootMgr::singleton_as('engine', \Moorexa\TemplateEngine::class);
 
         // create directive
         Rexa::directive('container', function(string $container_name, bool $cacheContainer = true)
@@ -89,7 +89,7 @@ class Container
         $hash = md5($data);
 
         // interpolate string
-        $this->hypheEngine->interpolateExternal($data, $interploate);
+        $interploate = $this->templateEngine->interpolateExternal($data);
 
         // add to watchman
         $json[$container_name] = $hash; 
@@ -115,6 +115,9 @@ class Container
 
         // extract vars from dropbox
         extract(\Moorexa\Controller::$dropbox);
+
+        // load assets
+        $assets = boot()->get('Moorexa\Assets');
 
         // include
         include $containerPath;

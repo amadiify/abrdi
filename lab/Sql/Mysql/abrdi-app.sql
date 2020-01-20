@@ -330,3 +330,85 @@ CREATE TABLE IF NOT EXISTS `Zema_users` (
 	loggedinToken VARCHAR(255) , 
 	siteid VARCHAR(255)
 );
+CREATE TABLE IF NOT EXISTS `Zema_Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255)
+);
+CREATE TABLE IF NOT EXISTS `Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255)
+);
+ALTER TABLE `Zema_Events` ADD siteid INT AFTER event_button;
+CREATE TABLE IF NOT EXISTS `Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255) , 
+	siteid INT
+);
+ALTER TABLE `Zema_Events` CHANGE COLUMN date_created event_date VARCHAR(255);
+ALTER TABLE `Zema_Events` CHANGE COLUMN event_image date_created DATETIME default CURRENT_TIMESTAMP;
+ALTER TABLE `Zema_Events` CHANGE COLUMN event_button event_image VARCHAR(255);
+ALTER TABLE `Zema_Events` CHANGE COLUMN siteid event_button VARCHAR(255);
+ALTER TABLE `Zema_Events` ADD siteid INT AFTER event_button;
+CREATE TABLE IF NOT EXISTS `Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	event_date VARCHAR(255) , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255) , 
+	siteid INT
+);
+ALTER TABLE `Zema_Events` DROP siteid;
+CREATE TABLE IF NOT EXISTS `Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	event_date VARCHAR(255) , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255)
+);
+ALTER TABLE `Zema_Events` ADD siteid INT AFTER event_button;
+CREATE TABLE IF NOT EXISTS `Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	event_date VARCHAR(255) , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255) , 
+	siteid INT
+);
+ALTER TABLE `Zema_Events` CHANGE COLUMN siteid siteid VARCHAR(255);
+CREATE TABLE IF NOT EXISTS `Zema_Events` (
+	eventid BIGINT(20) auto_increment primary key, 
+	event_title VARCHAR(255) , 
+	event_body TEXT , 
+	event_date VARCHAR(255) , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	event_image VARCHAR(255) , 
+	event_button VARCHAR(255) , 
+	siteid VARCHAR(255)
+);
+CREATE TABLE IF NOT EXISTS `Zema_PhotoBoot` (
+	imageid BIGINT(20) auto_increment primary key, 
+	image_name VARCHAR(255) , 
+	image_caption TEXT , 
+	image VARCHAR(255) , 
+	date_created DATETIME default CURRENT_TIMESTAMP, 
+	publish VARCHAR(255) , 
+	siteid VARCHAR(255)
+);

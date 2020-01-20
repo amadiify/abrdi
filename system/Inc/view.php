@@ -453,7 +453,7 @@ class View extends Bootloader
 
 				$beforeFunc = substr($meth, 0, $stop);
 				
-				$chs = new CHS();
+				$chs = new TemplateEngine();
 
 				$class = new $controller;
 
@@ -765,6 +765,10 @@ class View extends Bootloader
 				$directory = env('bootstrap', 'controller.basepath') . '/' . $folder . '/Views';
 				// set path
 				$viewpath = $directory . $subpath . '/' . $filename . $extension;
+				if (file_exists($render))
+				{
+					$viewpath = $render;
+				}
 			break;
 		}
 
@@ -2022,7 +2026,7 @@ class View extends Bootloader
 		if ($this->cacheCss($output, $getpath, basename($cssfile)) === false)
 		{
 			$this->outputOriginal = $output;
-			CHS::interpolateText($output);
+			TemplateEngine::interpolateText($output);
 			$this->InterpolateContent = $output;
 
 			$this->cacheCss(null, $other, basename($cssfile));
@@ -2267,18 +2271,12 @@ class View extends Bootloader
 
 		if (is_null($hyphe))
 		{
-			$hyphe = new \Moorexa\CHS();
+			$hyphe = new \Moorexa\TemplateEngine();
 		}
 
 		$hyphe->interpolateString = false;
-		$class = isset(Bootloader::$currentClass->model) ? Bootloader::$currentClass->model : null;
 
-		if (is_null($class))
-		{
-			$class = $this;
-		}
-		
-		$data = $hyphe->interpolateExternal($data, $class, $interpolated);
+		$data = $hyphe->interpolateExternal($data, $interpolated);
 		\Hyphe\Compile::ParseDoc($interpolated);
 
 		$content = $interpolated;
@@ -2286,10 +2284,7 @@ class View extends Bootloader
 		$data = preg_replace('/(<php-var>)([^<]+)(<\/php-var>)/', '', $data);
 
 		$data = preg_replace("/(@)\s{0}(setdefault)/m", '', $data);
-
-		// clean up
-		$class = null;
-
+		
 		return $data;
 	}
 }

@@ -30,7 +30,7 @@ $alias = [
 	'Moorexa\Dir' 			=> ['path' => PATH_TO_INC . 'dir.php'],
 	'Moorexa\Request' 		=> ['path' => PATH_TO_INC . 'request.php'],
 	'Moorexa\Registry' 		=> ['path' => PATH_TO_INC . 'registry.php'],
-	'Moorexa\CHS' 			=> ['path' => PATH_TO_LIB . 'chs.php'],
+	'Moorexa\TemplateEngine'=> ['path' => PATH_TO_LIB . 'TemplateEngine.php'],
 	'Moorexa\UrlConfig' 	=> ['path' => PATH_TO_CONFIG . 'urlConfig.php'],
 	'Moorexa\Template' 		=> ['path' => PATH_TO_INC . 'templates.php'],
 	'Moorexa\Linker' 		=> ['path' => PATH_TO_INC . 'linker.php'],

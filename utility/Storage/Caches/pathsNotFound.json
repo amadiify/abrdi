@@ -1498,5 +1498,104 @@
     ".\/utility\/\/Exceptions\/Database:Query.php": [
         ".\/utility\/\/Exceptions\/Database",
         "Query.php"
+    ],
+    "Installations\/Plugins\/Events:Query.php": [
+        "Installations\/Plugins\/Events",
+        "Query.php"
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:plugins.css:plugins.cxx.css:Plugins.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "plugins.css",
+            "plugins.cxx.css",
+            "Plugins.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:plugins.js:Plugins.js": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "plugins.js",
+            "Plugins.js"
+        ]
+    ],
+    ".\/lab\/:CHS.php": [
+        ".\/lab\/",
+        "CHS.php"
+    ],
+    ".\/utility\/:CHS.php": [
+        ".\/utility\/",
+        "CHS.php"
+    ],
+    ".\/utility\/Classes\/:CHS.php": [
+        ".\/utility\/Classes\/",
+        "CHS.php"
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Static\/:home.css:Home.css": [
+        ".\/lab\/Cms\/MVC\/App\/Static\/",
+        [
+            "home.css",
+            "Home.css"
+        ]
+    ],
+    ".\/lab\/Cms\/MVC\/App\/Partials\/:events.html:Events.html": [
+        ".\/lab\/Cms\/MVC\/App\/Partials\/",
+        [
+            "events.html",
+            "Events.html"
+        ]
+    ],
+    "kernel\/Partials\/:events.html:Events.html": [
+        "kernel\/Partials\/",
+        [
+            "events.html",
+            "Events.html"
+        ]
+    ],
+    "Installations\/Plugins\/Edit:Edit.php": [
+        "Installations\/Plugins\/Edit",
+        "Edit.php"
+    ],
+    ".\/lab\/\/Cms\/Installations:Edit.php": [
+        ".\/lab\/\/Cms\/Installations",
+        "Edit.php"
+    ],
+    ".\/utility\/:Edit.php": [
+        ".\/utility\/",
+        "Edit.php"
+    ],
+    ".\/utility\/Classes\/:Edit.php": [
+        ".\/utility\/Classes\/",
+        "Edit.php"
+    ],
+    ".\/pages\/App\/Static\/:gallery.css:gallery.cxx.css:Gallery.css": [
+        ".\/pages\/App\/Static\/",
+        [
+            "gallery.css",
+            "gallery.cxx.css",
+            "Gallery.css"
+        ]
+    ],
+    ".\/pages\/App\/Static\/:gallery.js:Gallery.js": [
+        ".\/pages\/App\/Static\/",
+        [
+            "gallery.js",
+            "Gallery.js"
+        ]
+    ],
+    "Installations\/Plugins\/Gallery:Gallery.php": [
+        "Installations\/Plugins\/Gallery",
+        "Gallery.php"
+    ],
+    ".\/utility\/:Gallery.php": [
+        ".\/utility\/",
+        "Gallery.php"
+    ],
+    ".\/utility\/Classes\/:Gallery.php": [
+        ".\/utility\/Classes\/",
+        "Gallery.php"
+    ],
+    "Installations\/Plugins\/Gallery:Directives.php": [
+        "Installations\/Plugins\/Gallery",
+        "Directives.php"
     ]
 }
