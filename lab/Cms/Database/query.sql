@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 15, 2020 at 04:11 PM
+-- Generation Time: Jan 20, 2020 at 09:10 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -104,7 +104,7 @@ INSERT INTO `Zema_containers` (`containerid`, `container_name`, `container_body`
 (17, 'footer-text', 'African Better Roads Development Initiative is an NGO that promotes the development of Inter and Intra Regional Connectivity within the African continent.', 'ABRDI'),
 (18, 'home-sub-heading', 'WHAT WE DO', 'ABRDI'),
 (19, 'home-heading', 'Promote Economic Growth across Africa', 'ABRDI'),
-(20, 'home-button', '<div class=\"banner-btn\">\r\n									<h6>Explore Events</h6>\r\n									<a href=\"texas-work.html\" class=\"btn-scroll\"><em class=\"ti-angle-right\"></em></a>\r\n								</div>', 'ABRDI'),
+(20, 'home-button', '<div class=\"banner-btn\">\r\n									<h6>Explore Events</h6>\r\n									<a $href=\"app/events\" class=\"btn-scroll\"><em class=\"ti-angle-right\"></em></a>\r\n								</div>', 'ABRDI'),
 (22, 'who-we-are', '<!-- section -->\r\n	<div class=\"section section-x tc-grey\">\r\n		<div class=\"container\">\r\n			<div class=\"row gutter-vr-30px justify-content-between align-items-start align-items-md-start\">\r\n				<div class=\"col-lg-6 order-lg-last\">\r\n					<div class=\"box-image\">\r\n						<img src=\"@image(&#039;who-we-are&#039;);\" alt=\"\">\r\n					</div>\r\n				</div><!-- .col -->\r\n				<div class=\"col-lg-6\">\r\n					<div class=\"text-block block-pad-b-100\">\r\n						<h5 class=\"heading-xs dash\">Who are we</h5>\r\n						<h2>@container(&#039;who-we-are-title&#039;);</h2>\r\n						@container(&#039;who-we-are-body&#039;);\r\n						<a href=\"@goto(&#039;about&#039;);\" class=\"btn\">More About Us</a>\r\n					</div><!-- .text-block  -->\r\n				</div><!-- .col -->\r\n			</div><!-- .row -->\r\n			<div class=\"row gutter-vr-30px\">\r\n				<div class=\"col-md-6\">\r\n					<div class=\"text-block bg-primary tc-light d-flex\">\r\n						<div class=\"row align-items-center m-0\">\r\n							<div class=\"col-12 p-0 col-xl-6 order-xl-last\">\r\n								<div class=\"box-image\">\r\n									<img src=\"@image(&#039;better-roads&#039;);\" alt=\"\">\r\n								</div>\r\n							</div>\r\n							<div class=\"col-12 col-xl-6 p-lg-0\">\r\n								<div class=\"text-box team-pad\">\r\n									<h4>Our Vision</h4>\r\n									<p>@container(&#039;vision-text&#039;);</p>\r\n								</div>\r\n							</div>\r\n						</div>\r\n					</div>\r\n				</div><!-- .col -->\r\n				<div class=\"col-md-6\">\r\n					<div class=\"text-block bg-secondary\">\r\n						<div class=\"row align-items-center m-0\">\r\n							<div class=\"col-12 p-0 col-xl-6 order-xl-last\">\r\n								<div class=\"box-image\">\r\n									<img src=\"@image(&#039;mission-image&#039;);\" alt=\"\">\r\n								</div>\r\n							</div>\r\n							<div class=\"col-12 col-xl-6 p-lg-0\">\r\n								<div class=\"text-box team-pad\">\r\n									<h4>Our Mission</h4>\r\n									<p class=\"tc-grey\">@container(&#039;mission-text&#039;);</p>\r\n								</div>\r\n							</div>\r\n						</div>\r\n					</div>\r\n				</div><!-- .col -->\r\n			</div><!-- .row -->\r\n		</div>\r\n	</div>\r\n	<!-- .section -->', 'ABRDI'),
 (23, 'who-we-are-title', 'We’re an African NGO promoting better roads and economic growth across Africa', 'ABRDI'),
 (24, 'who-we-are-body', '<p class=\"lead\">@container(&#039;footer-text&#039;);</p>\r\n<p>Better road infrastructure is one basic and critical factor that shapes the face of development in every economy. Road networks provide access to employment, social, health and education services, which are vital to any development agenda.</p>', 'ABRDI'),
@@ -127,7 +127,11 @@ INSERT INTO `Zema_containers` (`containerid`, `container_name`, `container_body`
 (41, 'contact-page-intro', 'Have a question? Let&#039;s Talk', 'ABRDI'),
 (42, 'contact-address', '<!-- section  -->\r\n		<div class=\"section tc-light section-x\">\r\n			<div class=\"container\">\r\n				<div class=\"row gutter-vr-30px\">\r\n                    <div class=\"col-lg-3 col-md-4\"></div>\r\n                    <div class=\"col-lg-2 offset-lg-1 col-md-4\"></div>\r\n					<div class=\"col-lg-4 offset-lg-1 col-md-4\">\r\n						<div class=\"contact-text\">\r\n							<div class=\"text-box\">\r\n								<h3>Nigeria</h3>\r\n								<p class=\"lead\">@container(&#039;nigeria-address&#039;);</p>\r\n							</div>\r\n							<ul class=\"contact-list\">\r\n								@container(&#039;contact-list&#039;);\r\n							</ul>\r\n						</div>\r\n					</div><!-- .col -->\r\n				</div><!-- .row -->\r\n			</div><!-- .container -->\r\n			<!-- bg -->\r\n			<div class=\"bg-image bg-fixed\">\r\n				<img src=\"@image(&#039;contact-us-address-bg&#039;);\" alt=\"\">\r\n			</div>\r\n			<!-- .bg -->\r\n		</div>\r\n		<!-- .section -->', 'ABRDI'),
 (43, 'nigeria-address', 'Ground Floor Suite 2, Peace Park \'A\' Plaza, Plot 480/483, Ajose Adeogun Street, Off Obafemi Awolowo, Utako, Abuja', 'ABRDI'),
-(44, 'contact-list', '<li>\r\n									<em class=\"contact-icon ti-mobile\"></em>\r\n									<div class=\"conatct-content\">\r\n										<a href=\"tel:+2349075523333\">+2349075523333</a>\r\n									</div>\r\n								</li>\r\n								<li>\r\n									<em class=\"contact-icon ti-email\"></em>\r\n									<div class=\"conatct-content\">\r\n										<a href=\"mailto:info@abrdi.org\">info.at.abrdi.org</a>\r\n									</div>\r\n								</li>', 'ABRDI');
+(44, 'contact-list', '<li>\r\n									<em class=\"contact-icon ti-mobile\"></em>\r\n									<div class=\"conatct-content\">\r\n										<a href=\"tel:+2349075523333\">+2349075523333</a>\r\n									</div>\r\n								</li>\r\n								<li>\r\n									<em class=\"contact-icon ti-email\"></em>\r\n									<div class=\"conatct-content\">\r\n										<a href=\"mailto:info@abrdi.org\">info.at.abrdi.org</a>\r\n									</div>\r\n								</li>', 'ABRDI'),
+(45, 'events-page-intro', 'Recent Press Releases', 'ABRDI'),
+(46, 'news-wrapper', '<!-- section-news -->\r\n	<div class=\"section section-x section-news\">\r\n		<div class=\"container\">\r\n			<div class=\"row justify-content-center gutter-vr-60px\">\r\n				<div class=\"col-lg-6\">\r\n					<div class=\"row justify-content-center justify-content-md-start no-gutter\">\r\n						<div class=\"col-10 col-lg-7 text-center text-md-left\">\r\n							<div class=\"section-head section-sm\">\r\n								<h5 class=\"heading-xs dash\">Events</h5>\r\n								<h2>From the ABRDI news room</h2>\r\n							</div>\r\n						</div>\r\n					</div><!-- .row -->\r\n					<div class=\"row justify-content-center justify-content-md-start gutter-vr-30px\">\r\n                        {$events = @@getEvents(5);}\r\n\r\n                        @fetch ($events, &#039;event&#039;)\r\n						<div class=\"col-md-12\">\r\n							<div class=\"post post-v1 align-items-center\">\r\n								<div class=\"post-thumb\">\r\n									<a $href=\"$event->event_button\"><div $background-image=\"$event->event_image\" class=\"event_image\"></div></a>\r\n								</div>\r\n								<div class=\"post-content text-center text-md-left\">\r\n									<p class=\"post-tag post-date\">{strtoupper(date(&#039;F jS Y &#039;, strtotime($event->event_date)))}</p>\r\n									<h4><a $href=\"$event->event_button\">{$event->event_title}</a></h4>\r\n									<a $href=\"$event->event_button\" class=\"btn btn-arrow\">Read More</a>\r\n								</div>\r\n							</div><!-- .post -->\r\n						</div><!-- .col -->\r\n                        @endfetch\r\n\r\n						<div class=\"col-12 text-center text-md-left\">\r\n							<div class=\"text-box\">\r\n								<a href=\"@goto(&#039;events&#039;);\" class=\"btn btn-post\">View all blog</a>\r\n							</div>\r\n						</div>\r\n					</div>\r\n				</div><!-- .col -->\r\n				<div class=\"col-lg-6\">\r\n					<div class=\"block bdr feed ml-lg-4\">\r\n						<div class=\"feed-block d-flex\">\r\n							<div class=\"feed-icon\">\r\n								<i class=\"icon fab fa-twitter\"></i>\r\n							</div>\r\n							<div class=\"feed-content\">\r\n								<h4>ABRDI Feeds</h4>\r\n								<a href=\"#\"> @ abrdiOfficial</a>\r\n							</div>\r\n						</div>\r\n						<div class=\"feed-block\" id=\"tweets_feed\"></div>\r\n					</div>\r\n				</div><!-- .col -->\r\n			</div><!-- .row -->\r\n		</div><!-- .container -->\r\n	</div>\r\n	<!-- .section-news -->', 'ABRDI'),
+(47, 'new-list', '<!-- section/blog -->\r\n	<div class=\"section blog section-xx\">\r\n		<div class=\"container\">\r\n			<div class=\"row gutter-vr-30px\">\r\n            {$events = @@getEvents(50);}\r\n            \r\n            @fetch ($events, &#039;event&#039;)\r\n				<div class=\"col-md-6\">\r\n					<div class=\"post post-full\">\r\n						<div class=\"post-thumb\">\r\n							<a $href=\"$event->event_button\">\r\n								<div class=\"event-big-thumb\" $background-image=\"$event->event_image\"></div>\r\n							</a>\r\n						</div>\r\n						<div class=\"post-entry d-sm-flex d-block align-items-start\">\r\n							<div class=\"post-date\">\r\n                            @php\r\n                                $month = date(&#039;M&#039;, strtotime($event->event_date));\r\n                                $day = date(&#039;d&#039;, strtotime($event->event_date));\r\n                            @endphp\r\n								<p>{$month} <strong>{$day}</strong></p>\r\n							</div>\r\n							<div class=\"post-content\">\r\n								<div class=\"post-author d-flex align-items-center\">\r\n									{strtoupper(date(&#039;F jS Y &#039;, strtotime($event->event_date)))}\r\n								</div>\r\n								<h3><a $href=\"$event->event_button\" target=\"_blank\">{ucwords($event->event_title)}</a></h3>\r\n								<div class=\"content\">\r\n									<p>{substr($event->event_body, 0, 250)}..</p>\r\n								</div>\r\n							</div>\r\n						</div>\r\n					</div><!-- .post -->\r\n				</div><!-- .col -->\r\n            @endfetch\r\n\r\n			</div><!-- .row -->\r\n		</div><!-- .container -->\r\n	</div>\r\n	<!-- end section/blog -->', 'ABRDI'),
+(48, 'gallery-page-intro', 'Our Experience', 'ABRDI');
 
 -- --------------------------------------------------------
 
@@ -152,6 +156,31 @@ INSERT INTO `Zema_directives` (`directiveid`, `directive`, `directive_class`, `d
 (2, 'breacum-title', 'CmsGlobal\\Cms', 'loadBreadcumTitle', 'ABRDI'),
 (3, 'goto', 'CmsGlobal\\Cms', 'gotoDirective', 'ABRDI'),
 (4, 'breadcum-desc', 'CmsGlobal\\Cms', 'loadBreadcumDescription', 'ABRDI');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Zema_Events`
+--
+
+CREATE TABLE `Zema_Events` (
+  `eventid` bigint(20) NOT NULL,
+  `event_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `event_body` text COLLATE utf8mb4_unicode_ci,
+  `event_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date_created` datetime DEFAULT CURRENT_TIMESTAMP,
+  `event_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `event_button` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `siteid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `Zema_Events`
+--
+
+INSERT INTO `Zema_Events` (`eventid`, `event_title`, `event_body`, `event_date`, `date_created`, `event_image`, `event_button`, `siteid`) VALUES
+(1, 'ICSG 2020 - Get Ready Change is Here', 'The largest organization where global solution proposals are discussed and agenda is determined concerning smart city, grid and smart energy that aims at solving the problems cities are faced with and raising the quality of life of the city stakeholders by taking into consideration the “Smart City and Smart Grid Concept” that covers many issues from city, economy, transportation, energy and infrastructure management to environment, water and waste management, from security to accessibility and information access which are seen as an important tool of economic development, intercity competitiveness and increase in quality of life aimed at cities that impact the way of life shaped with digital infrastructure, 8th. International Istanbul Smart Cities and Grids Congress and Expo.', '2020-04-30', '2020-01-20 07:59:38', './lab/Cms/Installations/Plugins/Events/Images/a461d7364d3a28b668925ca470f02553icsg 2020 LOGO.png', 'https://icsgistanbul.com/en/', 'ABRDI'),
+(2, 'China (Shenzhen) International Logistics and Supply Chain Fair', 'Debut in 2006, China (Shenzhen) International Logistics and Supply Chain Fair (CILF) has been successfully held for 14 successive years and earned a popular reputation. As a professional, effective, reliable and wide exchange platform for all players in logistics, transport and relevant industries all over the world, the CILF attracts numerous international well-known firms to exhibit and further promotes the international influence of China&#039;s logistics industry.\r\n\r\n\r\nThe CILF2020 will be held on September 23-25 in Shenzhen Convention & Exhibition Center,  and it&#039;s expected to receive about 1,800 exhibitors from more than 50 countries & 140,000 visits from over 80 states and regions.', '2020-09-23', '2020-01-20 08:13:50', './lab/Cms/Installations/Plugins/Events/Images/f698fb35bbf266c57b9ded41370f1b94cilf.png', 'http://en.scmfair.com/gywmen/index.jhtml', 'ABRDI');
 
 -- --------------------------------------------------------
 
@@ -190,7 +219,9 @@ INSERT INTO `Zema_images` (`imageid`, `image_path`, `alt`, `title`, `image_name`
 (15, './lab/Cms/MVC/App/Uploads/our-objectives.jpg', NULL, NULL, 'our-objective-bg', 'ABRDI'),
 (16, './lab/Cms/MVC/App/Uploads/6d8a0f13826253adff2fad55a77505b5bad-road-need-fix.png', NULL, NULL, 'call-out-bg', 'ABRDI'),
 (17, 'CMS/mmexport1543478758695.jpg', NULL, NULL, 'we-believe', 'ABRDI'),
-(18, 'CMS/better-roads.png', NULL, NULL, 'home-banner', 'ABRDI');
+(18, 'CMS/better-roads.png', NULL, NULL, 'home-banner', 'ABRDI'),
+(19, './lab/Cms/MVC/App/Uploads/1cb18113ce49cbb1edf6b2047254a6cewhat-we-do-image.png', NULL, NULL, 'events-banner', 'ABRDI'),
+(20, './lab/Cms/MVC/App/Uploads/6f0ece83e358755ac3d42ae6d783b6dfwhat-we-do2.png', NULL, NULL, 'gallery-banner', 'ABRDI');
 
 -- --------------------------------------------------------
 
@@ -222,7 +253,7 @@ INSERT INTO `Zema_navigation` (`navigationid`, `page_name`, `page_link`, `naviga
 (2, 'About', 'app/about', 1, 1, 1, 0, 'about abrdi, About ABRDI', NULL, 'About ABRDI', 'About us', 'ABRDI'),
 (3, 'Focus', 'app/focus', 1, 1, 1, 0, 'ABRDI focus, abrdi focus, our focus', NULL, 'ABRDI Focus', 'Our Focus', 'ABRDI'),
 (4, 'Gallery', 'app/gallery', 1, 1, 1, 0, 'ABRDI Gallery, Gallery', NULL, 'ABRDI Gallery', 'Our Gallery', 'ABRDI'),
-(5, 'Project', 'app/project', 1, 1, 1, 0, 'ABRDI Projects, ABRDI project', NULL, 'ABRDI Projects', 'Our Projects', 'ABRDI'),
+(5, 'Events', 'app/events', 1, 1, 1, 0, 'ABRDI Events, ABRDI events, events', '', 'ABRDI Events', 'Our Events', 'ABRDI'),
 (6, 'Contact', 'app/contact', 1, 1, 1, 0, 'Contact ABRDI, contact abrdi', NULL, 'Contact ABRDI', 'Contact us', 'ABRDI');
 
 -- --------------------------------------------------------
@@ -267,6 +298,22 @@ INSERT INTO `Zema_permission` (`permissionid`, `permission`, `permission_group`,
 (2, 'Moderator', 'view,edit,update,upload', NULL),
 (3, 'Administrator', 'view,edit,update,delete,upload', NULL),
 (4, 'Super Adminstrator', 'view,edit,update,delete,upload,create,destroy', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Zema_PhotoBoot`
+--
+
+CREATE TABLE `Zema_PhotoBoot` (
+  `imageid` bigint(20) NOT NULL,
+  `image_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_caption` text COLLATE utf8mb4_unicode_ci,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date_created` datetime DEFAULT CURRENT_TIMESTAMP,
+  `publish` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `siteid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -336,7 +383,7 @@ CREATE TABLE `Zema_users` (
 --
 
 INSERT INTO `Zema_users` (`userid`, `permissionid`, `username`, `password`, `fullname`, `createdby`, `dateadded`, `loggedinToken`, `siteid`) VALUES
-(1, 4, 'admin', '$2y$10$BnjoihmHtIj1uXUuPyqATOrc2288.j5oiamNKN/E2JIf2tHndjabq', 'Amadi ifeanyi', 0, NULL, 'd42990abb07e76e83c82859921f9724f', 'ABRDI'),
+(1, 4, 'admin', '$2y$10$BnjoihmHtIj1uXUuPyqATOrc2288.j5oiamNKN/E2JIf2tHndjabq', 'Amadi ifeanyi', 0, NULL, '224c15e9e0c1df14942dd779053dee0b', 'ABRDI'),
 (2, 1, 'tester', '$2y$10$xA3ieHw0E7YjrlkiFJRAiOtDbC1ENASgwbtX.cWI226bfET1K44Le', 'Moderator user', 1, '2020-01-12 19:04:28', 'e0bd00293123e435cb82d81a9614d399', 'ABRDI');
 
 --
@@ -368,6 +415,12 @@ ALTER TABLE `Zema_directives`
   ADD PRIMARY KEY (`directiveid`);
 
 --
+-- Indexes for table `Zema_Events`
+--
+ALTER TABLE `Zema_Events`
+  ADD PRIMARY KEY (`eventid`);
+
+--
 -- Indexes for table `Zema_images`
 --
 ALTER TABLE `Zema_images`
@@ -390,6 +443,12 @@ ALTER TABLE `Zema_navigationtypes`
 --
 ALTER TABLE `Zema_permission`
   ADD PRIMARY KEY (`permissionid`);
+
+--
+-- Indexes for table `Zema_PhotoBoot`
+--
+ALTER TABLE `Zema_PhotoBoot`
+  ADD PRIMARY KEY (`imageid`);
 
 --
 -- Indexes for table `Zema_slides`
@@ -429,25 +488,31 @@ ALTER TABLE `Zema_config`
 -- AUTO_INCREMENT for table `Zema_containers`
 --
 ALTER TABLE `Zema_containers`
-  MODIFY `containerid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `containerid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `Zema_directives`
 --
 ALTER TABLE `Zema_directives`
-  MODIFY `directiveid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `directiveid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `Zema_Events`
+--
+ALTER TABLE `Zema_Events`
+  MODIFY `eventid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `Zema_images`
 --
 ALTER TABLE `Zema_images`
-  MODIFY `imageid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `imageid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `Zema_navigation`
 --
 ALTER TABLE `Zema_navigation`
-  MODIFY `navigationid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `navigationid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `Zema_navigationtypes`
@@ -460,6 +525,12 @@ ALTER TABLE `Zema_navigationtypes`
 --
 ALTER TABLE `Zema_permission`
   MODIFY `permissionid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `Zema_PhotoBoot`
+--
+ALTER TABLE `Zema_PhotoBoot`
+  MODIFY `imageid` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Zema_slides`

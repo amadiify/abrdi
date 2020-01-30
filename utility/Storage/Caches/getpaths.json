@@ -73,5 +73,6 @@
     ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Events.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Events.php",
     ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Directives.php",
     ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Gallery.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Gallery.php",
-    ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Directives.php"
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Gallery:Directives.php": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Directives.php",
+    ".\/lab\/\/Cms\/Installations\/Plugins\/Events:Query.php": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Query.php"
 }

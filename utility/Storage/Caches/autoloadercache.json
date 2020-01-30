@@ -39,5 +39,9 @@
     "Installations\/Plugins\/Events\/Directives": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Directives.php",
     "Installations\/Plugins\/Gallery\/Gallery": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Gallery.php",
     "Installations\/Plugins\/Gallery\/Directives": ".\/lab\/Cms\/Installations\/Plugins\/Gallery\/Directives.php",
-    "Cms\/Container": ".\/lab\/Cms\/Container.php"
+    "Cms\/Container": ".\/lab\/Cms\/Container.php",
+    "Installations\/Plugins\/Events\/Query": ".\/lab\/Cms\/Installations\/Plugins\/Events\/Query.php",
+    "Bootstrap\/Alert": ".\/utility\/Classes\/Bootstrap\/Alert.php",
+    "Moorexa\/HttpGet": "system\/Lib\/Http\/httpGet.php",
+    "Moorexa\/File": "system\/Inc\/files.php"
 }

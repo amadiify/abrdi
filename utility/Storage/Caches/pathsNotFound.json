@@ -1597,5 +1597,9 @@
     "Installations\/Plugins\/Gallery:Directives.php": [
         "Installations\/Plugins\/Gallery",
         "Directives.php"
+    ],
+    "public\/Assets\/Images\/:.\/lab\/Cms\/MVC\/App\/Uploads\/who-we-are.jpg": [
+        "public\/Assets\/Images\/",
+        ".\/lab\/Cms\/MVC\/App\/Uploads\/who-we-are.jpg"
     ]
 }
